@@ -9,9 +9,9 @@ import {
 } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import ToDo from "./ToDo";
-const ToDoContainer = ({ db, auth }) => {
+const ToDoContainer = ({ db, auth, collName }) => {
 	const qr = query(
-		collection(db, "todos"),
+		collection(db, collName),
 		where("uid", "==", auth.currentUser.uid)
 	);
 	const [allMessages] = useCollection(qr);
@@ -19,7 +19,6 @@ const ToDoContainer = ({ db, auth }) => {
 		deleteDoc(doc(db, "todos", id));
 	};
 	const setToDoDone = (id) => {
-		console.log(id);
 		updateDoc(doc(db, "todos", id), { status: "done" });
 	};
 

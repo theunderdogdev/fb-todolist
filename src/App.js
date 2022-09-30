@@ -23,6 +23,8 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 const db = getFirestore(app);
+const collName = process.env.REACT_APP_collName;
+
 function App() {
 	const initial = {
 		title: "",
@@ -42,7 +44,6 @@ function App() {
 		const { uid } = auth.currentUser;
 
 		if (toDo.title === "" || toDo.desc === "") {
-			console.log("Something wrong", toDo);
 			return;
 		}
 		addDoc(messageRef, {
@@ -52,7 +53,6 @@ function App() {
 			at: serverTimestamp(),
 			status: "pending",
 		}).then(() => {
-			console.log("added");
 			setToDo({ ...initial });
 		});
 	};
@@ -81,7 +81,7 @@ function App() {
 						onChange={handleInput}
 						onClick={onTextAdded}
 					/>
-					<ToDoContainer db={db} auth={auth} />
+					<ToDoContainer db={db} auth={auth} collName={collName} />
 				</>
 			) : (
 				<SignIn auth={auth} />
