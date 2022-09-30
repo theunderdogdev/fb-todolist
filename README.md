@@ -17,7 +17,7 @@ git clone https://github.com/theunderdogdev/cloud-c.git
 ### Go into directory and install the packages.
 
 ```
-    cd cloud-c && yarn install
+cd cloud-c && yarn install
 ```
 
 ### Go to firebase and create a collection.
