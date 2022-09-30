@@ -1,0 +1,54 @@
+.todo {
+	position: relative;
+	padding: 10px;
+	border-style: dashed;
+	width: fit-content;
+	padding-top: 50px;
+	width: 100%;
+}
+.todo::before {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 2px;
+	z-index: 2;
+	top: 50%;
+	left: -25px;
+	transform: translateY(-50%);
+	background-color: gainsboro;
+}
+.todoDone {
+	opacity: 0.75;
+}
+.title,
+.body {
+	padding: 10px;
+	width: fit-content;
+	border: 1px dashed rgba(0, 0, 0, 0.175);
+	border-radius: 6px;
+}
+.body p {
+	margin: 0px;
+}
+.control {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.ctrlBtn {
+	font-size: 30px;
+	padding: 0px;
+	border: none;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ctrlBtn i {
+	pointer-events: none;
+}

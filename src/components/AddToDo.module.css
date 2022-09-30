@@ -1,0 +1,39 @@
+.category {
+	position: relative;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	border-style: dashed;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+.inpContainer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+}
+.bodyEdit {
+	outline: none;
+	border: 1px dashed rgba(0, 0, 0, 0.175);
+	box-shadow: none;
+}
+
+.addBtn {
+	align-self: flex-end;
+	margin-top: 20px;
+	margin-left: auto;
+}
+.catButton {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px;
+}
+.category .btn i {
+	font-size: 1rem;
+}
