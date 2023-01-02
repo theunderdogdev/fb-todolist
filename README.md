@@ -1,4 +1,4 @@
-## Firebase Chat App
+## Firebase ToDo App
 
 Note: You should know how to use firebase and must have a project set up on firebase.
 
